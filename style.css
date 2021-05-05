@@ -27,7 +27,5 @@ body {
 }
 
 canvas {
-  filter: contrast(0.87) saturate(100%);
+  filter: contrast(140%);
 }
-
-/*# sourceMappingURL=style.css.map */
