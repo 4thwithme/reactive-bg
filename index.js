@@ -1,7 +1,5 @@
 "use strict";
 
-// Simulation code
-
 var overlay = document.getElementById("overlay");
 var canvas = document.getElementsByTagName("canvas")[0];
 resizeCanvas();
@@ -1131,8 +1129,7 @@ function splatPointer(pointer) {
   splat(pointer.texcoordX, pointer.texcoordY, dx, dy, pointer.color);
 }
 
-function multipleSplats(amount) {
-  // for (var i = 0; i < amount; i++) {
+function multipleSplats() {
   var color = generateColor();
   color.r *= 10.0;
   color.g *= 10.0;
@@ -1142,7 +1139,6 @@ function multipleSplats(amount) {
   var dx = 1000 * (Math.random() - 0.5);
   var dy = 1000 * (Math.random() - 0.5);
   splat(x, y, dx, dy, color);
-  // }
 }
 
 function splat(x, y, dx, dy, color) {
@@ -1394,7 +1390,7 @@ function hashCode(s) {
   var hash = 0;
   for (var i = 0; i < s.length; i++) {
     hash = (hash << 5) - hash + s.charCodeAt(i);
-    hash |= 0; // Convert to 32bit integer
+    hash |= 0;
   }
   return hash;
 }
